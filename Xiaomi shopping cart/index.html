@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+            list-style: none;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        body {
+            background: #f5f5f5;
+        }
+        .hid {
+            overflow: hidden;
+        }
+        .left {
+            float: left;
+        }
+        #box {
+            width: 978px;
+            margin: 20px auto;
+        }
+        #box ul {
+            margin-right: -14px;
+            overflow: hidden;
+        }
+        #box li {
+            width: 234px;
+            float: left;
+            margin-right: 14px;
+            padding: 34px 0 20px;
+            background: #FFF;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            margin-bottom:14px;
+        }
+        #box img{
+            margin-left: -50px;
+        }
+        .pro_img {
+            width: 50px;
+            height: 150px;
+            margin: 0 auto 18px;
+        }
+        .pro_name {
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: 400;
+        }
+        .pro_name a {
+            color: #333;
+        }
+        .pro_price {
+            color: #ff6700;
+            margin: 0 10px 10px;
+        }
+        .pro_rank {
+            color: #b0b0b0;
+        }
+        #box li:hover .add_btn {
+            display: block;
+        }
+        .add_btn {
+            background: #ff6700;
+            height: 66px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            line-height: 66px;
+            display: none;
+            color: #FFF;
+            font-size: 20px;
+        }
+        .car {
+            width: 978px;
+            margin: 20px auto;
+            background: #FFF;
+        }
+        .car .img {
+            width: 190px;
+        }
+        .car .img img {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 3px auto;
+        }
+        .car .name {
+            width: 350px;
+        }
+        .car .name span {
+            line-height: 1;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: normal;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .car .price {
+            width: 88px;
+            text-align: center;
+        }
+        .car .price span {
+            color: #ff6700;
+            font-size: 16px;
+        }
+        .car .number {
+            width: 88px;
+            text-align: center;
+            
+        }
+        .car .subtotal {
+            width: 88px;
+            text-align: center;
+        }
+        .car .ctrl {
+            width: 88px;
+            text-align: center;
+        }
+        .car .ctrl a {
+            font-size: 20px;
+            cursor: pointer;
+            display: block;
+            width: 26px;
+            height: 26px;
+            margin: 30px auto;
+            line-height: 26px;
+        }
+        .car .ctrl a:hover {
+            color: #FFF;
+            background: #ff6700;
+        }
+        .head_row {
+            height: 70px;
+            line-height: 70px;
+        }
+        .head_row, .row {
+            border-bottom: solid 1px #e0e0e0;
+        }
+        .row {
+            height: 86px;
+            line-height: 86px;
+            padding: 15px 0;
+        }
+        input[type='checkbox']{ 
+            zoom: 150%;
+            margin-left: 18px;
+            margin-top: 18px;
+        }
+        input[type='button'] {
+            width: 23px;
+        }
+        input[type='text'] {
+            border: none;
+            text-align: center;
+        }
+        .total_price {
+            padding-right: 20px;
+            width: 958px;
+            height: 50px;
+            text-align: right;
+            margin: 20px auto;
+            font-size: 20px;
+            color: orangered;
+            line-height: 50px;
+            background: #FFF;
+        }
+    </style>
+    <script>
+        //创建数据
+        window.onload = function(){
+            var aData = [{"imgUrl":"img/p1.jpg",
+                        "proName":"Casio/卡西欧 EX-TR350",
+                        "proPrice":"5999",
+                        "proNumber":"1",
+                        "proSubtotal":"5999",
+                        "proComm":"18"},
+                         {"imgUrl":"img/p2.jpg",
+                         "proName":"Canon/佳能 PowerShot SX50 HS",
+                         "proPrice":"3888",
+                         "proNumber":"1",
+                         "proSubtotal":"3888",
+                         "proComm":"1.4"},
+                         {"imgUrl":"img/p3.jpg",
+                         "proName":"Sony/索尼 DSC-WX300",
+                         "proPrice":"1428",
+                         "proNumber":"1",
+                         "proSubtotal":"1428",
+                         "proComm":"4.2"},
+                         {"imgUrl":"img/p4.jpg",
+                         "proName":"Fujifilm/富士 instax mini 25",
+                         "proPrice":"640",
+                         "proNumber":"1",
+                         "proSubtotal":"640",
+                         "proComm":"3.6"},
+                         ];
+            //创建商品展示区
+            var oBox = document.getElementById("box");
+            var oCar = document.getElementById("car");
+            var oUl = document.getElementsByTagName("ul")[0];
+            for(var i=0; i<aData.length; i++){
+                var oLi = document.createElement("li");
+                var data = aData[i];
+                oLi.innerHTML += '<div class="pro_img"><img src="'+data["imgUrl"]+'" width="150" height="150"></div>';
+                oLi.innerHTML += '<h3 class="pro_name"><a href="#">'+data["proName"]+'</a></h3>';
+                oLi.innerHTML += '<p class="pro_price">'+data["proPrice"]+'元</p>';
+                oLi.innerHTML += '<p class="pro_rank">'+data["proComm"]+'万人评价</p>';
+                oLi.innerHTML += '<div class="add_btn">加入购物车</div>';
+                oUl.appendChild(oLi);
+            }
+            //加入购物车4
+            var aBtn = getClass(oBox,"add_btn");
+            for(var i=0; i<aBtn.length; i++){
+                aBtn[i].index = i;
+                aBtn[i].onclick = function(){
+                    var oDiv = document.createElement("div");
+                    var data = aData[this.index];
+                    oDiv.className = "row hid";
+                    oDiv.innerHTML += '<div class="input left"><input type="checkbox" class="check"></div>';
+                    oDiv.innerHTML += '<div class="img left"><img src="'+data["imgUrl"]+'" width="80" height="80"></div>';
+                    oDiv.innerHTML += '<div class="name left"><span>'+data["proName"]+'</span></div>';
+                    oDiv.innerHTML += '<div class="price left"><span>'+data["proPrice"]+'</span><span>元</span></div>';
+                    oDiv.innerHTML += '<div class="number left"><input type="button" value="+" onclick="add(this)"><input type="text" value="'+data["proNumber"]+'" size="3"><input type="button" value="-" onclick="del(this)"></div>';
+                    oDiv.innerHTML += '<div class="subtotal left"><span>'+data["proSubtotal"]+'</span><span>元</span></div>';
+                    oDiv.innerHTML += '<div class="ctrl left"><a href="javascript:;">×</a></div>';
+                    oCar.appendChild(oDiv);
+                    totalPrice();
+                    //删除操作
+                    var delBtn = oDiv.lastChild.getElementsByTagName("a")[0];
+                    delBtn.onclick=function(){
+                        oCar.removeChild(oDiv);
+                        totalPrice();
+                    }
+                }
+            }
+            function getClass(oBox,tagname){
+                var aTag = oBox.getElementsByTagName("*");
+                var aBox = [];
+                for(var i=0; i<aTag.length; i++){
+                    if(aTag[i].className == tagname){
+                        aBox.push(aTag[i]);
+                    }
+                }
+                return aBox
+            }
+        //复选框操作
+        // var checkAll = document.getElementById('checkAll');
+        // var checks = document.getElementsByClassName('check');
+        // checkAll.onclick = function() {
+        //     console.log('this.checked');
+        //     for(var i = 0; i < checks.length; i++){
+        //         checks[i].checked = checkAll.checked;
+                
+        //     }
+        // }
+        // for(var i = 0; i < checks.length; i++){
+        //     checks[i].onclick = function() {
+        //         //flag控制按钮是否选中
+        //         console.log('i');
+        //         console.log('this.checked');
+        //         var flag = true;
+        //         for (var i = 0; i < checks.length; i++){
+        //             if(!checks[i].checked){
+        //                 flag = false;
+        //                 break;
+        //             }
+        //         }
+        //         checkAll.checked = flag;
+        //     }
+        // }
+        let checks=document.getElementsByClassName('check');
+        let checkAll=document.getElementById('checkAll');
+
+        //为全选checkbox添加事件
+        checkAll.onclick=function(){
+            console.log('88');
+            for(let i=0;i<checks.length;i++){
+                checks[i].checked=this.checked;
+            }
+        };
+        //遍历所有的checks，绑定onclick事件
+        for(let i=0;i<checks.length;i++){
+            checks[i].onclick=function(){
+                console.log('88');
+                Inputs();
+            };
+        }
+        let Inputs=function(){
+            let count=0;//定义一个计数变量
+            for(let j=0;j<checks.length;j++){//遍历checks
+                if(checks[j].checked==true){//如果状态为选中，count+1
+                    count++;
+                }
+                if(count==checks.length){//如果被选中的个数等于checks的长度
+                    checkAll.checked=true;//全选checkbox选中
+                }else{
+                    checkAll.checked=false;//全选checkbox不选中
+                }
+            }
+        };
+        }
+        //按钮点击操作
+        //+操作
+        function add(btn) {
+            var obj = btn.nextElementSibling;
+            var val = obj.value;
+            val++;
+            obj.value = val;
+            //小计操作
+            var price = btn.parentElement.previousElementSibling.firstElementChild.innerHTML;
+            btn.parentElement.nextElementSibling.firstElementChild.innerHTML = val*price;
+            totalPrice();
+            }
+        //-操作
+        function del(btn) {
+            var obj = btn.previousElementSibling;
+            var val = obj.value;
+            val--;
+            if (val < 1) {
+                return flase;
+            } else {
+                obj.value = val;
+            }
+            //小计操作
+            var price = btn.parentElement.previousElementSibling.firstElementChild.innerHTML;
+            btn.parentElement.nextElementSibling.firstElementChild.innerHTML = val*price;
+            totalPrice();
+        }
+        //合计操作
+        function totalPrice(){
+            var arr = document.getElementsByClassName('row hid');
+            var len = arr.length;
+            var totalP = 0;
+            for(var i = 0; i < len; i++){
+                var p = arr[i].lastElementChild.previousElementSibling.firstElementChild.innerHTML;
+                totalP += parseFloat(p);
+            }
+            document.getElementById('totalPrice').innerHTML = '合计:' + totalP +'元';
+        }
+    </script>
+</head>
+<body>
+    <div id="car" class="car">
+        <div class="head_row hid">
+            <div class="input left" ><input type="checkbox" id="checkAll"></div>
+            <div class="img left">&nbsp;</div>
+            <div class="name left">商品名称</div>
+            <div class="price left">单价</div>
+            <div class="number left">数量</div>
+            <div class="subtotal left">小计</div>
+            <div class="ctrl left">操作</div>
+        </div>
+    </div>
+    <div class="total_price" id="totalPrice">合计:0元</div>
+    <div id="box">
+        <ul>
+        </ul>
+    </div>
+</body>
+</html>
