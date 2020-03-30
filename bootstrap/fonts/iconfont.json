@@ -1,0 +1,23 @@
+{
+  "id": "1590588",
+  "name": "bootstrap",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8777649",
+      "name": "social_sina",
+      "font_class": "icon-test",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "8777657",
+      "name": "social_wechat",
+      "font_class": "icon-test1",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    }
+  ]
+}

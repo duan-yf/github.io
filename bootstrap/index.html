@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap中文网</title>
+    <link rel="shortcut icon" href="icon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    <style>
+    body,*{
+        padding: 0;
+        margin: 0;
+    }
+    .menu{
+        width: 100%;
+        background-color: black;
+        color: #999;
+        position: fixed;
+        top: 0;
+    }
+    .menu-text{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .menu-text-left{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .red-point{
+        position: relative;
+    }
+    .red-point::before{
+        content: "";
+        border: 5px solid red;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1000px;
+        right: 0;
+        margin-right: -8px;
+    }
+    .menu-text-left span{
+        display: inline-block;
+        padding: 10px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .menu-text-right{
+        position: absolute;
+        right: 10%;
+        top: 10px;
+    }
+    .top{
+        width: 100%;
+        background-image: url("./img/头部-图片.png");
+        color: #fff;
+    }
+    .content{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 150px 0;
+    }
+    .content ul{
+        width: 100%;
+        list-style: none;
+    }
+    .content li{
+        width: 100%;
+    }
+    .top-text-1{
+        width: 100%;
+        font-size: 90px;
+        text-align: center;
+    }
+    .content a{
+        display: block;
+    }
+    .top-text-2{
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .top-text-3{
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+        font-size: 20px;
+        background: #337ab7;
+        text-align: center;
+        margin: 0 auto;
+        box-shadow: inset 0;
+    }
+    .top-text-4{
+        margin-top: 20px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .recommend{
+        font-size: 14px;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: rgb(236, 236, 236);
+        text-align: center;
+    }
+    .iconfont{
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    .xm-text{
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        border-bottom: 1px solid rgb(236, 236, 236);
+        padding-top: 60px;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .xm-text a{
+        display: block;
+        margin-bottom: 5px;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+    }
+    .xm-text span{
+        color: rgb(55, 30, 10);
+    }
+    .main {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 80px;
+        margin: 0 auto;
+    }
+    .box{
+        height: 400px;
+        width: 270px;
+        margin: 0 -65px 20px 85px;
+        border: 1px solid dimgrey;
+        float: left;
+    }
+    .box img{
+        width: 250px;
+        height: 150px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .box a {
+        display: block;
+        font-size: 25px;
+        text-align: center;
+        color: rgb(89, 134, 187)
+    }
+    .box p {
+        font-size: 14px;
+        text-align: center;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .footer{
+        width: 100%;
+        margin-top: 20px;
+        height: 200px;
+        overflow: hidden;
+        border-top: 1px solid  rgb(236, 236, 236);
+    }
+    .footer-text{
+        margin: 50px 5px 0 55px;
+        line-height: 20px;
+        color: darkgray;
+        float: left;
+    }
+    .footer-text span{
+        display: inline-block;
+        margin-bottom: 10px;
+        color: rgb(139, 0, 139);
+    }
+    .footer-text p {
+        margin-bottom: 3px;
+    }
+
+    .top-bottom img {
+        width: 80px;
+        height: 80px;
+        margin-left: 70px;
+        margin-top: 120px;
+    }
+    .footer-bottom{
+        width: 100%;
+        height: 100px;
+        border-top-width: 100px;
+        border-top: 1px solid  rgb(236, 236, 236);
+        line-height: 90px;
+        text-align: center;
+        margin: 0 auto;
+        width: 80%;
+        color: darkgrey;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="menu-text">
+            <div class="menu-text-left">
+            <span><a>Bootstrap中文网</a></span>
+            <span><a>Bootstrap2中文网</a></span>
+            <span><a>Bootstrap3中文网</a></span>
+            <span><a>Bootstrap4中文网</a></span>
+            <span><a>less 教程</a></span>
+            <span><a>Jquery API</a></span>
+            <span class="red-point">网络实例</span>
+            </div>
+            <div class="menu-text-right">
+                <span><a>关于</a></span>
+            </div>
+        </div>
+    </div>
+        <div class="top">
+            <div class="content">
+                <ul>
+                <li><b><a class="top-text-1">Bootstrap</a></b></li>
+                <li><a class="top-text-2">简洁、直观、强悍的前端开发框架，让web开发更加迅捷、简单</a></li>
+                <li><a class="top-text-3">Bootstrap中文文档（v3.3.7）</a></li>
+                <li><a class="top-text-4">Bootstrap中文文档（v2.3.2）</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="recommend">
+            <span><a ><span class="iconfont">&#xe65e;</span>&nbsp;Bootstrap问答社区 &nbsp;&nbsp;| &nbsp;</a></span>
+            <span><a><span class="iconfont">&#xe65d;</span>&nbsp;新浪微博：@Bootstrap中文网</a></span>
+        </div>
+        <div class="xm-text">
+            <a>Bootstrap相关优质项目推荐</a>
+            <span>这些项目或者是对Bootstrap进行了有益的补充，或者是基于Bootstrap开发的</span>
+        </div>
+        <div class="main">
+
+            <div class="box">
+                <img src="./img/expo.png">
+                <a>优站精选</a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Bootstrap 网站实例</a>
+                <p>Bootstrap 优站精选频道收集了众多基于 Bootstrap 构建、设计精美的、有创意的网站。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/webpack.png">
+                <a>Webpack</a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">是前端资源模块化管理和打包工具</a>
+                <p>Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/react.png">
+                <a>React</a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">用于构建用户界面的 JavaScript 框架</a>
+                <p>React 起源于 Facebook 的内部项目，是一个用于构建用户界面的 JavaScript 库。。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/typescript.png">
+                <a>TypeScript </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>TypeScript 是由微软开源的编程语言。它是 JavaScript 的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。 </p>
+
+            </div>
+
+
+            <div class="box">
+                <img src="./img/jqueryapi.png">
+                <a>jQuery API </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>根据最新的 jQuery 1.11.x 和 2.1.x 版本翻译的 jQuery API 中文文档/手册。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/nextjs.png">
+                <a>Next.js </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>Next.js 是一个轻量级的 React 服务端渲染应用框架。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/babeljs.png">
+                <a>Babel </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">是一个 JavaScript 编译器。</a>
+                <p>Babel 是一个 JavaScript 编译器。Babel 通过语法转换器支持最新版本的 JavaScript 语法。 </p>
+            </div>
+            <div class="box">
+                <img src="./img/nodejs.png">
+                <a>Node.js </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">中文文档 / 手册</a>
+                <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 </p>
+            </div>
+            <div class="box">
+                <img src="./img/yarn.png">
+                <a>jYarn </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">中文手册</a>
+                <p>Yarn 是一个快速、可靠、安全的依赖管理工具。是 NPM 的替代品。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/npm.png">
+                <a>NPM </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">中文文档</a>
+                <p>NPM（node package manager）是 Node.js 世界的包管理器。NPM 可以让 JavaScript 开发者在共享代码、复用代码以及更新共享的代码上更加方便。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/vuejs.png">
+                <a>Vue.js </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>Vue.js - 是一套构建用户界面的渐进式框架。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/svelte.png">
+                <a>Svelte </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文网</a>
+                <p>Svelte 是构建 Web 应用程序的一种新方法。Svelte 是一个编译器，它将声明性组件转换成高效的 JavaScript 代码，并像做外科手术一样细粒度地更新 DOM。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/browsersync.png">
+                <a>Browsersync </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">浏览器同步测试工具</a>
+                <p>Browsersync 浏览器同步测试工具，很容易与 Web 平台、构建工具和其他 Node.js 项目集成，替代了大量重复测试劳动。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/parcel.png">
+                <a>Parcel</a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>Parcel - 极速、零配置的 web 应用打包工具。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/lodash.png">
+                <a>Lodash </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">JavaScript 工具库/a>
+                    <p>Lodash 是一个具有一致接口、模块化、高性能等特性的 JavaScript 工具库。比相同功能的 Underscore.js 使用更广泛。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/progit.png">
+                <a>Pro Git </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Git 入门到专家指南</a>
+                <p>Pro Git 中文版（第二版）是一本详细的 Git 指南，主要介绍了 Git 的使用基础和原理，让你从 Git 初学者成为 Git 专家。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/codeguide (1).png">
+                <a>Bootstrap 编码规范 </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">by @mdo</a>
+                <p>Bootstrap 编码规范：编写灵活、稳定、高质量的 HTML 和 CSS 代码的规范。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/rollup.png">
+                <a>Rollup </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">新一代的 JavaScript 模块打包工具</a>
+                <p>Rollup 是一个 JavaScript 模块打包工具，可以将小块代码编译成大块复杂的代码。Rollup 对 JavaScript 代码模块使用新的 ES6 标准化格式，如 CommonJS
+                    和
+                    AMD。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/preact.png">
+                <a>Preact </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">React 轻量替代方案。</a>
+                <p>Preact - 一个只有 3kB 大小的 React 替代品，拥有与 React 相同的 API、组件和虚拟 DOM。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/underscore.png">
+                <a>Underscore.js</a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">JavaScript 工具库</a>
+                <p>Underscore.js是一个 JavaScript 工具库，它提供了一整套函数式编程的实用功能，弥补了 jQuery 没有实现的功能，同时又是 Backbone 必不可少的部分。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/gulpjs.png">
+                <a>gulp.js </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">基于流的自动化构建工具。</a>
+                <p>gulp.js - 基于流(stream)的自动化构建工具。Grunt 采用配置文件的方式执行任务，而 Gulp 一切都通过代码实现。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/gruntjs.png">
+                <a>Grunt </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">项目构建工具 </a>
+                <p>Grunt 是基于 Node.js 的项目构建工具。它可以自动运行你所设定的任务。Grunt 拥有数量庞大的插件，几乎任何你所要做的事情都可以用 Grunt 实现。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/eslint.png">
+                <a>ESLint </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">JavaScript 代码检查工具 </a>
+                <p>ESLint 是一个插件化并且可配置的 JavaScript 语法规则和代码风格的检查工具。ESLint 能够帮你轻松写出高质量的 JavaScript 代码。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/sass.png">
+                <a>Sass </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">最流行的 CSS 扩展语言解析器</a>
+                <p>Sass 是一个成熟、稳定、强大的 CSS 扩展语言解析器。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/lesscss.png">
+                <a>LESS </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">一种动态样式语言</a>
+                <p>LESS 为 CSS 赋予了动态语言的特性，如变量、继承、运算、函数。LESS 既可以在客户端上运行 (支持 IE 6+、Webkit、Firefox)，也可以借助 Node.js 或者
+                    Rhino
+                    在服务端运行。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/handlebars.png">
+                <a>Handlebars </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">一个书写高效率、语义化的模板引擎</a>
+                <p>Handlebars 是一个书写高效率、语义化的模板引擎，与 Mustache 模板兼容。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/stylus.png">
+                <a>Stylus </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">CSS 预处理语言</a>
+                <p>Stylus - 富于表现力、健壮、功能丰富的 CSS 预处理语言。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/pug.png">
+                <a>Pug </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Node.js 模板引擎</a>
+                <p>Pug 是一款健壮、灵活、功能丰富的模板引擎，专门为 Node.js 平台开发。Pug 是由 Jade 改名而来。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/liquid.png">
+                <a>Liquid </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Jekyll 的模板语言。</a>
+                <p>Liquid - 最流行的模板语言。Jekyll、Github Pages 都在用。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/zeptojs.png">
+                <a>Zepto.js </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">JavaScript 工具库</a>
+                <p>Zepto.js 是一个轻量级、兼容 jQuery 的 JavaScript 工具库。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/ejs.png">
+                <a>EJS </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文文档</a>
+                <p>EJS 是一套简单的模板语言，帮你利用普通的 JavaScript 代码生成 HTML 页面。EJS 没有再造一套迭代和控制流语法，有的只是普通的 JavaScript 代码而已。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/tailwindcss.png">
+                <a>Tailwind CSS </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文文档</a>
+                <p>Tailwind CSS 是一个用于快速UI开发的实用工具集 CSS 框架。与 Bootstrap 、Foundation 不同，Tailwind CSS 没有内置的 UI
+                    组件。完全需要开发者根据自身情况来定制设计。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/jekyll.png">
+                <a>Jekyll </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">JavaScript 工具库</a>
+                <p>Jekyll 是一个静态站点生成工具。它将 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/hexo.png">
+                <a>Hexo </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/progit.png">
+                <a>PostCSS </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文网</a>
+                <p>PostCSS 利用 JavaScript 的强大编程能力对 CSS 代码进行转换。数以百计的 PostCSS 插件可以用来为 CSS 属性添加特定于浏览器厂商的前缀、支持未来 CSS
+                    语法、模块化、代码检测等。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/chartjs.png">
+                <a>Chart.js </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">开源的 HTML5 图表工具</a>
+                <p>Chart.js 是为设计和开发人员准备的简单、灵活的 JavaScript 图表工具。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/vuepress.png">
+                <a>VuePress </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">基于 Vue 前端开发框架的静态站</a>
+                <p>VuePress 是基于 Vue 前端开发框架的静态站点生成工具。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/nunjucks.png">
+                <a>Nunjucks </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">模板引擎</a>
+                <p>Nunjucks 是 JavaScript 专用的功能丰富、强大的模板引擎。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/webassembly.png">
+                <a>WebAssembly </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">面向 web 应用的编译格式</a>
+                <p>WebAssembly 或者 wasm，是一种新型可移植，具有占用存储小，加载速度快等特点的面向 web 应用的编译格式。</p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/bundler.png">
+                <a>Bundler </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">是 Ruby 世界中最好的 gem 管理工具</a>
+                <p>Bundler 是 Ruby 世界中最好的 gem 管理工具。 </p>
+
+            </div>
+
+
+            <div class="box">
+                <img src="./img/nginx.jpg">
+                <a>Nginx </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>根据最新的 jQuery 1.11.x 和 2.1.x 版本翻译的 jQuery API 中文文档/手册。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/w3schools.png">
+                <a>w3schools </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">原版国内镜像</a>
+                <p>w3schools.com 是最受欢迎的前端技术教程网站，但是国内用户一直不能访问，并且国内的中文翻译版本十分陈旧。因此做了个镜像，希望英文好的同学直接去看原版教程吧！ </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/sphinx.jpg">
+                <a>Sphinx </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">中文手册</a>
+                <p>Sphinx 是一个用于构建文档的工具，最初是为 Python 文档而开发的。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/stickup.png">
+                <a>stickUp </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">让页面元素“固定”位置</a>
+                <p>stickUp 能让页面目标元素“固定”在浏览器窗口的顶部，即便页面在滚动，目标元素仍然能出现在设定的位置。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/responsive-nav.js.png">
+                <a>Responsive Nav </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">响应式导航</a>
+                <p>响应式导航（Responsive Nav）是一个很小的JS插件，压缩之后仅有1.7KB，能帮你创建针对小屏幕的可切换式导航 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/unslider.png">
+                <a>Unslider </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">jQuery轮播插件</a>
+                <p>Unslider - 一个超小的 jQuery 轮播（slider） 插件。支持主流浏览器、键盘导航、自动调整高度和响应式布局。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/flat-ui.png">
+                <a>Flat UI </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Metro 风格的 Bootstrap </a>
+                <p>Flat UI 是基于 Bootstrap 做的 Metro 化改造，由Designmodo提供。Flat UI包含了很多Bootstrap提供的组件，但是外观更加漂亮。在此强烈推荐！</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/layoutit.png">
+                <a>LayoutIt! </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Bootstrap 可视化布局</a>
+                <p>LayoutIt! 可拖放排序在线编辑的Bootstrap可视化布局系统。由4wer同学汉化整理。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/bootstrap-switch.png">
+                <a>Bootstrap Switch </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">Bootstrap 开关组件</a>
+                <p>Bootstrap Switch 是对 Bootstrap 控件的扩充。基于选 HTML 中基本的选择框控件实现只有开和关两种状态的单选按钮。</p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/sco.js.png">
+                <a>Sco.js </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">增强复选框和单选按钮</a>
+                <p>iCheck 让不同浏览器下的复选框（checkboxes）和单选按钮（radio button）更美观、功能更强。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/icheck.png">
+                <a>iCheck </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">增强复选框和单选按钮</a>
+                <p>iCheck 让不同浏览器下的复选框（checkboxes）和单选按钮（radio button）更美观、功能更强。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/bootstrap-wysiwyg.png">
+                <a>bootstrap-wysiwyg </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">为Bootstrap定制的可视编辑器</a>
+                <p>bootstrap-wysiwyg 是一个 jQuery Bootstrap 插件（5KB, 200 行代码）可以将任何一个 div 转变成一个 WYSIWYG 富文本编辑器。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/preboot.png">
+                <a>Preboot </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Bootstrap 的前世</a>
+                <p>Preboot 是一组用 less 语法书写的混合（mixin）和变量（variable）的集合，目的是辅助用户书写更优美的CSS。Bootstrap的前身就是Preboot。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/simpleicons.png">
+                <a>Simple Icons </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Icon汇</a>
+                <p>Simple Icons -- Icon汇。收集众多网站的 Logo，并提供高质量、不同尺寸的 png 格式图片给广大网友，所有 Icon 版权归其所属公司。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/bsie.png">
+                <a>Bsie </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Bootstrap IE6 兼容方案</a>
+                <p>Bsie 弥补了 Bootstrap 对 IE6 的不兼容。目前，bsie 能在 IE6 上支持大部分 bootstrap 的特性，可惜，还有一些实在无法支持...</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/jquery.pin (1).png">
+                <a>jQuery.Pin </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">固定页面元素的 jQuery 插件</a>
+                <p>jQuery.Pin 能将任意页面元素“钉”在某个容器顶部，而且在尺寸小的屏幕上能够自动禁用这种效果。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/messenger.png">
+                <a>Messenger </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">非常酷的弹框(Alert)组件</a>
+                <p>Messenger 是一个非常酷的弹框(Alert)组件，能够非常好的与 Bootstrap 融合，当然，单独使用效果也是非常棒。Messenger 自带4套皮肤。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/bootstrap-datetimepicker.png">
+                <a>DateTime Picker </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">日期时间选择器</a>
+                <p>Bootstrap 日期时间选择器（Bootstrap DateTime Picker）是一个 Bootstrap 组件，能够简化页面上日期、时间的输入。 </p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/google-bootstrap.png">
+                <a>Google Bootstrap </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Google 风格的 Bootstrap</a>
+                <p>Google 的 UI 素来以简洁著称，现在 Bootstrap 也来 Google Style 一把，喜欢 Google 的就来试试这套 Google Bootstrap 吧！ </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/metro-ui-css.png">
+                <a>Metro UI CSS </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Bootstrap 与 Metro 融合</a>
+                <p>Metro UI CSS 是一套用来创建类似于 Windows 8 Metro UI 风格网站的样式。现在，Metro UI CSS 项目在 Bootstrap
+                    的基础上被开发成一个独立的解决方案。
+                </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/font-awesome.png">
+                <a>Font Awesome </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Font AwesomeBootstrap 专用图标字体</a>
+                <p>Font Awesome 中包含的所有图标都是矢量的，也就可以任意缩放，避免了一个图标做多种尺寸的麻烦。CSS 对字体可以设置的样式也同样能够运用到这些图标上了。</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/bootstrap-form-builder.png">
+                <a>Bootstrap Form Builder</a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">在线表单构造器</a>
+                <p>Bootstrap 在线表单构造器能够以鼠标拖拽的方式迅速生成一个基于 Bootstrap 的完整表单，减轻了各位码农手写HTML代码的劳动，而且不会出错。 </p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/h5bp.png">
+                <a>HTML5 Boilerplate </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">专业的前端模版</a>
+                <p>HTML5 Boilerplate 是一套专业的前端模版，用以开发快速、健壮、适应性强的 app 或网站。 </p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/websafecolors.png">
+                <a>Web Safe Colors </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Web 安全色</a>
+                <p>本表中列出的是 WEB 设计、开发中常用安全色。列于此是为了方便大家参考。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/bootstrap-docs.png">
+                <a>Bootstrap Docs </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Bootstrap 文档全集</a>
+                <p>这里收集了 Bootstrap 从 V1.0.0 版本到现在，整个文档的历史。Bootstrap 本身就是一个传奇，而这些文档就是传奇的见证！</p>
+
+            </div>
+            <div class="box">
+                <img src="./img/37.png">
+                <a>Git Guide </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">Git 简易指南 </a>
+                <p>Git简易指南 -- 帮助你开始使用 git 的简易指南，木有高深内容，;)。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/grumblejs (1).png">
+                <a>Grumble.js </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">气泡形状的提示（Tooltip）控件 </a>
+                <p>一个气泡形状的提示（Tooltip）控件，可以在其围绕的元素周围做360度任意定位。 </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/jquery-ui-bootstrap.png">
+                <a>jQuery UI Bootstrap </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">用 Bootstrap 美化 jQuery UI</a>
+                <p>这套工具让你在使用 jQuery UI 控件时也能充分利用 Bootstrap 的样式，而且不会出现样式不统一的现象，Bootstrap 和 jQuery UI 可以完美融合在一起了！ </p>
+
+            </div>
+            <div class="box">
+                <img src="./img/cikonss.png">
+                <a>CIKONSS </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">纯 CSS 实现的 Icon</a>
+                <p>Cikonss 是纯 CSS 实现的响应式 Icon，兼容 IE8+。 </p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/headroom.png">
+                <a>Headroom.js </a>
+                <a style="text-align: center; color: dimgrey;font-size:17px;">隐藏或展示页面元素</a>
+                <p>Headroom.js 是一个轻量级、纯 JavaScript 组件，用来隐藏或展现页面上的元素，为你的页面留下更多展示内容的空间。 </p>
+
+            </div>
+
+            <div class="box">
+                <img src="./img/buttons.png">
+                <a>Buttons </a>
+                <a style="text-align: center; color: dimgrey;font-size: 17px;">CSS 按钮样式库</a>
+                <p>Buttons 是一个基于 Sass 和 Compass 构建的CSS按钮（button）样式库，图标采用的是Font Awesome，可以和 Bootstrap 融合使用。</p>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-text">
+                <img src="./img/捕获.JPG">
+                <p>我们一直致力于为广大开发者提供更多的优质技术文档和辅助开发工具！</p>
+            </div>
+            <div class="footer-text">
+                <span>关于</span>
+                <p>关于我们</p>
+                <p>广告合作</p>
+                <p>友情链接</p>
+                <p>招聘</p>
+            </div>
+            <div class="footer-text">
+                <span>联系方式</span>
+                <p>新浪微博</p>
+                <p>电子邮件</p>
+            </div>
+            <div class="footer-text">
+                <span>旗下网站</span>
+                <p>Laravel中文网</p>
+                <p>Ghost中国</p>
+                <p>BootCDN</p>
+                <p>Packagist中国镜像</p>
+            </div>
+            <div class="footer-text">
+                <span>特别致谢</span>
+                <p>天猫</p>
+                <p>京东云</p>
+                <p>BootCDN</p>
+                <p>又云拍</p>
+            </div>
+            <div class="top-bottom">
+                <img src="./img/向上.png" onclick="window.scrollTo(0,0)" style="cursor: pointer;">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            京ICP备11008151号-6 &nbsp;| &nbsp;京公网安备11010802014853 </div>
+    </div>
+</body>
+</html>
