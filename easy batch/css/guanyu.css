@@ -1,0 +1,448 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.page{
+	width: 100%;
+	/*height: 1600px;*/
+	/*color: #ffffff;*/
+}
+.navbar{
+	width: 100%;
+	height: 80px;
+	background-color: #22282d;
+	border: 1px solid #22282D;
+}
+
+.navbar-brand{
+	margin-top: 5px;
+}
+.navbar-brand img{
+	height: 40px;
+	float: left;
+}
+.navbar-brand span{
+	height: 0px;
+	line-height: 40px;
+	display: inline-block;
+	font-family: "微软雅黑";
+	color: #FFFFFF;
+	font-size: 14px;
+}
+#custom-nav{
+	padding-left: 10%;
+	padding-top: 10px;
+	/*float: left;*/
+}
+#custom-nav ul{
+	list-style:none;
+	float: left;
+}
+#custom-nav #fix{
+	color:#ef4f19; 
+	font-weight:bold;
+	text-decoration:none;
+	background-color:inherit;
+	border-bottom:1px solid #ef4f19;
+	height:56px;
+	text-align: center;
+}
+#custom-nav li{
+	/*float: left;*/
+	height: 56px;
+	background-color: #22282d;
+	line-height: 56px;
+	font-size: 14px;
+	padding-right: 40px;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+
+#custom-nav a{
+	display: block;
+	text-align: center;
+	height: 56px;
+	text-decoration: none;
+}
+#custom-nav a:link{
+	color: #FFFFFF;
+	text-decoration:none;
+}
+#custom-nav a:visited{
+	color:#FFFFFF;
+	text-decoration:underline;
+}
+#custom-nav a:hover{
+	color:#ef4f19; 
+	font-weight:bold;
+	text-decoration:none;
+	background-color:inherit;
+	border-bottom:1px solid #ef4f19;
+	height:56px;		
+	text-align: center;
+}
+.custom-nav-right{
+	float: right;
+}
+#custom-nav-right img{
+	height: 50px;
+	margin-top: 16px;
+	padding-right: 20px;
+	float: left;
+	cursor: pointer;
+	
+}
+#custom-nav-right span{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 10px;
+	font-family: "georgia";
+	font-size: 16px;
+	margin-top: 20px;
+	color: #FFFFFF;
+}
+#custom-nav-right button{
+	width: 120px;
+	height: 40px;
+	background-color: inherit;
+	margin-left: 30px;
+	margin-top: 20px;
+	border-radius: 6px;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+}
+#custom-nav-right button:hover{
+	background-color: #EF4F19;
+	border: 1px solid #EF4F19;
+	cursor: pointer;
+}
+.get_top{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	width: 50px;
+	height: 50px;	
+	background-color: #1b1515;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.get_top span{
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 8px;
+	margin-left: 12px;
+}
+.box2{
+	width: 100%;
+	height: 200px;
+	margin-top: 80px;
+	background-color: #F3F3F3;
+}
+.box3-left{
+	float: left;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.box3-left img{
+	width: 100%;
+	float: left;
+}
+.box3-right{
+	float: left;
+	margin-top: 60px;
+	margin-left: 30px;
+}
+.box3-right .we h1{
+	color: #000000;
+	font-family: "微软雅黑";
+	font-size: 28px;
+	font-weight: bold;
+}
+.box3-right .we span{
+	display: inline-block;
+	border-bottom: 2px solid #EF4F19;
+	width: 50px;
+	height: 1.33px;
+}
+.box3-right .we{
+	margin-bottom: 20px;
+}
+.box3-right p{
+	text-indent: 2em;
+	width: 100%;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color: #6C6B6B;
+	line-height: 200%;
+}
+.box4{
+	width: 100%;
+	background-color: #F3F3F3;
+}
+.box4 .container{
+	padding-bottom: 80px;
+}
+.box4-top{
+	text-align: center;
+}
+.box4-top h1{
+	color: #000000;
+	font-family: "微软雅黑";
+	font-size: 28px;
+	margin-top: 100px;
+	font-weight: bold;
+}
+.box4-top span{
+	display: inline-block;
+	border-bottom: 2px solid #EF4F19;
+	width: 50px;
+	height: 1.33px;
+}
+.box4-top p{
+	font-family: "黑体";
+	font-size: 16px;
+	color: #727272;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+.banner img{
+	width: 70%;
+	border-radius: 100%;
+	margin-left: 50%;
+}
+.banner p{
+	width: 80%;
+	text-align: left;
+	margin-left: 10%;
+	line-height: 240%;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	margin-bottom: -2px;
+}
+.banner em{
+	float: right;
+	color: #727272;
+	margin-top: 46px;
+	margin-right: 20px; 
+	font-style: normal;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+.banner span{
+	float: right;
+	color: #EF4F19;
+	margin-top: 48px;
+	font-family: "微软雅黑";
+	margin-right: 100px;
+}
+.box5-left{
+	float: left;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.box5-left img{
+	width: 100%;
+	float: left;
+}
+.box5-right{
+	float: left;
+	margin-left: 30px;
+	margin-top: 60px;
+}
+.box5-right .we h1{
+	color: #000000;
+	font-family: "微软雅黑";
+	font-size: 28px;
+	font-weight: bold;
+}
+.box5-right .we span{
+	display: inline-block;
+	border-bottom: 2px solid #EF4F19;
+	width: 50px;
+	height: 1.33px;
+	margin-left: 30px;
+}
+.box5-right .we{
+	margin-bottom: 20px;
+}
+.box5-right p{
+	width: 100%;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color: #6C6B6B;
+	line-height: 200%;
+}
+.footer{
+	width: 100%;
+	height: 120px;
+	background-color: #22282d;
+}
+.footer p{
+	font-size: 14px;
+	line-height: 14px;
+	color: #727272;
+	margin-top: 53px;
+	float: left;
+}
+.footer botton{
+	display:inline-block;
+	font-size:12px;
+	color:#FFFFFF;	
+	width:140px;
+	height:40px;
+	line-height: 40px;
+	background-color:#ef4f19;
+	border-radius:20px;
+	text-align:center;
+	margin-top:40px;
+	border:1px solid #ef4f19;
+		}
+.footer botton:hover{
+	background-color: inherit;
+	border:1px solid #ef4f19;
+	color: #ef4f19;
+	cursor: pointer;
+}
+.footer-navigation{
+	width: 100%;
+	background-color: #32383d;
+}
+.navigation1{
+	width: 90%;
+	margin-top: 60px;
+	float: left;
+}
+.navigation1 span{
+	display: inline-block;
+	font-size: 20px;
+	color: #888888;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	margin-bottom: 20px;
+}
+.navigation1 p{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #727272;
+	line-height: 30px;
+	margin-top: -5px;
+}
+.navigation2{
+	width: 90%;
+	margin-top: 60px;
+	float: left;
+}
+.navigation2 span{
+	display: inline-block;
+	font-size: 20px;
+	color: #888888;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	margin-bottom: 20px;
+}
+.navigation2 p{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #4E9243;
+	letter-spacing:2px;
+	margin-bottom: 30px;
+}
+.navigation2 em{
+	font-style: normal;
+	font-size: 14px;
+	color: #727272;
+	font-family: "微软雅黑";
+	letter-spacing:2px;
+}
+.navigation3{
+	width: 90%;
+	margin-top: 60px;
+	float: left;
+}
+.navigation3 span{
+	display: inline-block;
+	font-size: 20px;
+	color: #888888;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	margin-bottom: 20px;
+}
+.navigation3 img{
+	margin-right: 6px;
+	height: 20px;
+	float: left;
+}
+.navigation3 p{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #727272;
+	margin-bottom: 20px;
+}
+.navigation4{
+	width: 90%;
+	margin-top: 60px;
+	float: left;
+}
+.navigation4 span{
+	display: inline-block;
+	font-size: 20px;
+	color: #888888;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	margin-bottom: 20px;
+}
+.navigation4 img{
+	margin-right: 6px;
+	height: 20px;
+	float: left;
+}
+.navigation4 p{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	color: #727272;
+	margin-bottom: 20px;
+}
+
+
+
+/*自适应不同屏幕*/
+@media (min-width: 768px) and (max-width: 992px) {		
+	#custom-nav-right{display: none;}
+	#custom-nav{float: right;}	
+}
+@media (max-width: 768px) {
+	.navbar{height: 70px;}
+	.navbar-header{height: 68px;}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form{border-color: #555555;}
+	.navbar-brand{margin-top: -4px;}
+	.navbar-header button{margin-top: 18px;}
+	#custom-nav{margin-top: -10px;}
+	#custom-nav li{margin-left: -40px;}
+	#custom-nav li a{margin-left: 40px;}
+	#custom-nav-right{display: none;}
+	.box2{height: 0%;margin-top: 60px;}
+	.box3-left{margin: 60px auto 40px auto;}
+	.box3-right{margin: 0px auto 40px auto;}
+	.box3 .we{text-align: center;}
+	.box3 .we h1{font-size: 22px;}
+	.box4-top{text-align: center;}
+	.box4-top h1{font-size: 22px;}
+	.banner img{width: 50%;margin: 0px auto 20px auto;}
+	.banner p{width: 100%;margin: 0px auto;}
+	.banner span{float: right;margin-right: 0px;}
+	.unslider-arrow.prev{height: 0px;}
+	.unslider-arrow.next{height: 0px;}
+	.box5-left{margin: 40px auto 0px auto;}
+	.box5-right p{width: 100%;}
+	.box5-right{margin: 0px auto 40px auto;width: 100%;}
+	.box5-right .we{text-align: center;}
+	.box5-right .we h1{font-size: 22px;}
+	.box5-right .we span{margin:0px auto;}
+	.footer botton{margin-top: -10%;}
+	.navigation1{margin-left: 5%;}
+	.navigation2{margin-left: 5%;}
+	.navigation3{margin-left: 5%;}
+	.navigation4{margin-left: 5%;}
+}
